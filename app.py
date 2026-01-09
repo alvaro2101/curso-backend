@@ -1,10 +1,15 @@
-nombre = input("¿Cual es tu nombre? ")
-edad = input("¿Cuantos años tienes? ")
+print("--- SISTEMA DE SEGURIDAD TIPO ODISEA ---")
+#ODISEA es una empresa de seguridad en mi pais
+nombre = input("Ingresa tu nombre: ")
+edad = int(input("Ingresa tu edad: "))
 
-edad_numero = int(edad)
-edad_en_10_anos = edad_numero + 10
+if edad >= 18:
+    print("ACCESO CONCEDIDO")
+    print("Bienvenido , " + nombre + ". Puedes pasar a la xona VIP.")
+else:
+    print("ACCESO DENEGADO")
+    print("Los siento " + nombre + ", eres menor de edad.")
+    faltan = 18 - edad
+    print("Vuelve en " + str(faltan)+ "años.")
 
-print("---------------------------")
-print("Hola" + nombre + ", gusto en conocerte prro.")
-print("En 10 años tendras" + str(edad_en_10_anos) + " años.")
-print("---------------------------")
+    print("--- Fin del Programa causa ---")
